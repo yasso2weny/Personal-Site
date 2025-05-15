@@ -38,33 +38,36 @@ Object.values(techObj).forEach(framework => {
     techName.className = 'tech-name';
     techName.textContent = framework.name;
     techCol.appendChild(techName);
-
-    techBox.onmouseover = function() {
-        techName.style.display = "block";
-    }
-
-    techBox.onmouseout = function() {
-    techName.style.display = "none";
-    }
 }) 
 
 
 const projectObj = {
     proj1: {
-        name: "Photographer Portfolio Landing Page – Kristine",
+      title: "Potion Shop Website",
+        name: "Brew It, Bottle It, Sell It — Magical UX for Every Customer",
         description:
-        "A modern landing page design for photographers to showcase their work and be easily hired.",
-        image: "images/web01.jpg",
-        link: "#",
-        tools: ["React", "SQL", "Frontend"],
+        "A whimsical e-commerce storefront for a fantasy potion shop, complete with animated effects, product filters, and a smooth cart experience.",
+        image: "images/proj01.jpg",
+        link: "https://dribbble.com/shots/25665998-Potion-Shop",
+        tools: ["Wix Studio", "E-Commerce", "UIAnimation"],
     },
         proj2: {
-        name: "Photographer Portfolio Landing Page – Kristine",
+          title: "Streaming Service Manager App",
+        name: "All Your Streams in One Seamless Dashboard",
         description:
-        "A modern landing page design for photographers to showcase their work and be easily hired.",
-        image: "images/web01.jpg",
-        link: "#",
-        tools: ["React", "SQL", "Frontend"],
+        "A clean, modern landing page for an app that helps users track, organize, and manage all their streaming services in one place.",
+        image: "images/proj02.jpg",
+        link: "https://dribbble.com/shots/25793582-Streaming-App-Website",
+        tools: ["Landing Page", "Tracker", "ProductivityApp"],
+    },
+        proj3: {
+          title: "Ice Cream Truck Landing Page",
+        name: "Cool Treats. Hot Design.",
+        description:
+        "A playful and colorful website for an ice cream brand, featuring interactive scoops, dripping effects, and sweet pastel themes.",
+        image: "images/proj03.png",
+        link: "https://dribbble.com/shots/25995798-Ice-Cream-Truck-Landing-Page",
+        tools: ["BrandWebsite", "CSSAnimation", "FoodDesign"],
     }
 };
 
@@ -94,7 +97,6 @@ const section = document.getElementById("projectSection");
 
 Object.values(projectObj).forEach(project => {
   
-  // Project Row (Article)
   const article = document.createElement("article");
   article.className = "project-row";
 
@@ -103,6 +105,15 @@ Object.values(projectObj).forEach(project => {
   img.src = project.image;
   img.alt = `Screenshot of ${project.name}`;
   img.loading = "lazy";
+
+  const projImgContainer = document.createElement('div');
+  projImgContainer.className = 'proj-img-container';
+  projImgContainer.appendChild(img);
+
+  const projImgOverlay = document.createElement('div');
+  projImgOverlay.className = 'proj-img-overlay';
+  projImgOverlay.textContent = project.title;
+  projImgContainer.appendChild(projImgOverlay);
 
   const infoCol = document.createElement("div");
   infoCol.className = "project-info-col";
@@ -130,14 +141,14 @@ Object.values(projectObj).forEach(project => {
   visitBtn.href = project.link;
   visitBtn.className = "visit-btn";
   visitBtn.setAttribute("role", "button");
-  visitBtn.textContent = "Visit";
+  visitBtn.textContent = "Visit Site";
 
   infoCol.appendChild(h3);
   infoCol.appendChild(description);
   infoCol.appendChild(toolsList);
   infoCol.appendChild(visitBtn);
 
-  article.appendChild(img);
+  article.appendChild(projImgContainer);
   article.appendChild(infoCol);
 
   // Assemble the project section
@@ -180,3 +191,13 @@ Object.values(projectObj).forEach(project => {
       status.textContent = "Error submitting form.";
     }
   });
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});

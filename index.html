@@ -3,50 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yassin's Portfolio</title>
+    <meta
+      name="description"
+      content="Web development and web design portfolio based in nanaimo BC Canada"
+    />
+    <meta
+      name="keywords"
+      content="web development, Yassin Mohamed, portfolio, frontend, web developers near me, website design companies, ui designs"
+    />
+    <meta name="author" content="Yassin Mohamed" />
+    <title>Yassin Mohamed | Web Developer Portfolio</title>
+    <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section class="main-hero-section">
-      <div class="transparent-bg" aria-label="Site Header">
-        <!-- Navigation Bar -->
-        <nav class="navbar" aria-label="Primary Navigation">
-          <div class="avatar" aria-label="Yassin's Logo"></div>
-          <ul class="nav-links">
-            <li><a href="#projectSection" id="projects">Projects</a></li>
-            <li><a href="#abtSection" id="about">About Me</a></li>
-          </ul>
-        </nav>
-        <!-- Hero Section -->
-        <main class="hero-section" role="main">
-          <p class="tagline">
-            <span class="typewriter-text">
-              <span class="tag-symbol">&lt;</span>
-              I'm Yassin, a web developer and designer, crafting the
-              <span class="tag-symbol">/&gt;</span>
-            </span>
-          </p>
-          <h1 class="headline">
-            <span class="highlight">Website</span> of your digital dreams
-          </h1>
-          <a href="#contactSection"
-            ><button class="contact-btn">Contact Me</button></a
-          >
-        </main>
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator" aria-hidden="true">
-          <span class="arrow">↓</span>
-          <span class="text">Scroll</span>
-        </div>
+    <!-- Hero Section -->
+    <section class="hero-section" aria-label="Hero Section">
+      <!-- Navigation Bar -->
+      <nav class="navbar" aria-label="Primary Navigation">
+        <img
+          src="images/logo.png"
+          alt="Avatar Icon"
+          loading="lazy"
+          class="avatar"
+        />
+        <ul class="nav-links">
+          <a href="#projectSection"><li>Projects</li></a>
+          <a href="#abtSection"><li>About Me</li></a>
+        </ul>
+      </nav>
+      <!-- Hero Section -->
+      <main class="hero-content" role="main">
+        <p class="tagline">
+          <span class="typewriter-text">
+            <span class="tag-symbol">&lt;</span>
+            I'm Yassin, a web developer and designer, crafting the
+            <span class="tag-symbol">/&gt;</span>
+          </span>
+        </p>
+        <h1 class="headline">
+          <span class="highlight">Website</span> of your digital dreams
+        </h1>
+        <a href="#contactSection"
+          ><button class="contact-btn">Contact Me</button></a
+        >
+      </main>
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <span class="arrow">↓</span>
+        <span class="text">Scroll</span>
       </div>
     </section>
     <!-- About Me Section -->
-    <section class="abt-section" id="abtSection">
-      <div class="abt-bg">
-        <div class="abt-left">
-          <div class="abt-row">
-            <h1 class="abt-h"><span class="underline">About</span> Me</h1>
-            <button class="resume-btn">Resume</button>
+    <section class="abt-section" id="abtSection" aria-label="Hero Section">
+      <div class="top-row">
+        <div class="abt-info">
+          <div class="abt-info-row">
+            <h1 class="abt-h"><span class="underline">Abou</span>t Me</h1>
+            <a href="public/resume.pdf" download>
+              <button class="resume-btn" aria-label="Resume Button">
+                Resume
+              </button>
+            </a>
           </div>
           <p class="abt-p">
             I'm a web developer and designer with a passion for creating clean,
@@ -59,37 +77,48 @@
             technologies to deliver modern, effective solutions.
           </p>
         </div>
-        <div class="photo-and-socials-section">
-          <img class="myPicture" src="images/mypicture.jpg" alt="my picture" />
+        <div class="abt-profile">
+          <img
+            class="my-picture"
+            src="images/mypicture.jpg"
+            alt="Personal Photo"
+            loading="lazy"
+          />
           <div class="social-col">
-            <p class="socials-txt">My Socials</p>
-            <span class="vertical-line"></span>
-            <img
-              class="social-icon"
-              src="images/icons/github-icon.png"
-              alt="github icon"
-            />
-            <img
-              class="social-icon"
-              src="images/icons/linkedin-icon.png"
-              alt="linkedin icon"
-            />
-            <img
-              class="social-icon"
-              src="images/icons/dribble-icon.png"
-              alt="dribble icon"
-            />
-            <img
-              class="social-icon"
-              src="images/icons/frontend-mentor-icon.png"
-              alt="frontend mentor icon"
-            />
+            <a href="https://github.com/yasso2weny">
+              <img
+                class="social-icon"
+                src="images/icons/github-icon.png"
+                alt="github icon"
+              />
+            </a>
+            <a href="https://linkedin.com/in/yassin-mohamed-1a2bbb324">
+              <img
+                class="social-icon"
+                src="images/icons/linkedin-icon.png"
+                alt="linkedin icon"
+              />
+            </a>
+            <a href="https://dribbble.com/YassinMohamed101">
+              <img
+                class="social-icon"
+                src="images/icons/dribble-icon.png"
+                alt="dribble icon"
+              />
+            </a>
+            <a href="https://www.frontendmentor.io/profile/yasso2weny">
+              <img
+                class="social-icon"
+                src="images/icons/frontend-mentor-icon.png"
+                alt="frontend mentor icon"
+              />
+            </a>
           </div>
         </div>
-        <div class="tech-section">
-          <p class="tech-header">My Favorite Web Technologies that i use:</p>
-          <div class="tech-row" id="techRow"></div>
-        </div>
+      </div>
+      <div class="tech-section">
+        <p class="tech-header">Tools & Technologies I Use Regularly:</p>
+        <div class="tech-row" id="techRow"></div>
       </div>
     </section>
     <!-- Projects Section -->
@@ -97,96 +126,62 @@
       class="project-section"
       id="projectSection"
       aria-labelledby="projects-heading"
-    >
-      <!-- <div class="project-bg">
-        <div class="project-sec-header-row">
-          <h2 id="projects-heading" class="project-sec-header">
-            My Latest Design & Development Projects
-          </h2>
-          <a href="/projects" class="all-proj-btn" role="button"
-            >All Projects</a
-          >
-        </div>
-
-        <article class="project-row">
-          <img
-            class="project-image"
-            src="images/web01.jpg"
-            alt="Screenshot of Photographer Portfolio Landing Page - Kristine"
-            loading="lazy"
-          />
-          <div class="project-info-col">
-            <h3 class="project-name">
-              Photographer Portfolio Landing Page – Kristine
-            </h3>
-            <p class="project-description">
-              A modern landing page design for photographers to showcase their
-              work and be easily hired.
-            </p>
-            <ul class="tools-row" aria-label="Technologies used">
-              <li class="tool">React</li>
-              <li class="tool">SQL</li>
-              <li class="tool">Frontend</li>
-            </ul>
-            <a href="#" class="visit-btn" role="button">Visit</a>
-          </div>
-        </article>
-      </div> -->
-    </section>
+    ></section>
     <!-- Contact Form -->
     <section
       class="contact-section"
       id="contactSection"
-      aria-labelledby="contact-heading"
+      aria-label="Contact Section"
     >
-      <div class="contact-bg">
-        <div class="contact-header-row">
-          <h2 id="contact-heading" class="contact-header">Get In Touch</h2>
+      <div class="contact-info-section">
+        <h1 class="cif-h">Let's Work Together</h1>
+        <div class="contact-info-col">
+          <div class="contact-info-row">
+            <img src="images/icons/email-icon.png" alt="Email Icon" />
+            <p>yassinelhassan2@gmail.com</p>
+          </div>
+          <div class="contact-info-row">
+            <img src="images/icons/phone-icon.png" alt="Phone Icon" />
+            <p>(250) 618-1776</p>
+          </div>
+          <div class="contact-info-row">
+            <img src="images/icons/location-icon.png" alt="Location Icon" />
+            <p>Nanaimo, BC Canada</p>
+          </div>
         </div>
-        <form
-          class="contact-form"
-          action="https://formspree.io/f/movdypdp"
-          method="POST"
-        >
-          <label for="name" class="form-label">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            class="form-input"
-            required
-          />
-
-          <label for="email" class="form-label">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            class="form-input"
-            required
-          />
-
-          <label for="message" class="form-label">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            class="form-textarea"
-            required
-          ></textarea>
-          <p
-            class="form-status"
-            style="
-              display: none;
-              color: var(--highlight-clr);
-              font-weight: bold;
-            "
-          ></p>
-
-          <button type="submit" class="send-btn">Send Message</button>
-        </form>
       </div>
-    </section>
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/movdypdp"
+        method="POST"
+      >
+        <label for="name" class="form-label">Name</label>
+        <input type="text" id="name" name="name" class="form-input" required />
 
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="form-input"
+          required
+        />
+
+        <label for="message" class="form-label">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          class="form-textarea"
+          required
+        ></textarea>
+        <p
+          class="form-status"
+          style="display: none; color: var(--highlight-clr); font-weight: bold"
+        ></p>
+
+        <button type="submit" class="send-btn">Send Message</button>
+      </form>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>
