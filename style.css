@@ -743,7 +743,10 @@ body {
 /* #### MEDIA QUERIES #### */
 
 /* Mobile devices */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  body {
+    overflow-x: hidden;
+  }
   /* #### HERO SECTION #### */
   .hero-section {
     background-image: none;
@@ -751,8 +754,25 @@ body {
     height: auto;
   }
 
+  .tagline {
+    font-size: 16px;
+  }
+
+  .typewriter-text {
+    white-space: normal;
+    width: auto;
+    animation: none;
+  }
+
   .headline {
     font-size: 50px;
+    width: 90%;
+    animation: fadeIn 0.5s ease-in forwards;
+  }
+
+  .contact-btn {
+    animation: btnFadeIn 0.5s ease-in forwards 0.5s,
+      breathe 3s ease-in-out infinite 3s;
   }
 
   /* #### ABOUT ME SECTION #### */
@@ -760,12 +780,30 @@ body {
     background-image: none;
     background: linear-gradient(180deg, #000000 0%, #6241b4 100%);
     justify-content: space-evenly;
-    gap: 0;
+    height: auto;
+    gap: 30px;
+    padding-top: 100px;
   }
 
   .top-row {
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .abt-info {
+    gap: 30px;
+  }
+
+  .abt-p {
+    text-align: center;
+  }
+
+  .abt-info-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
   }
 
   .project-sec-header-row {
@@ -776,6 +814,8 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    height: auto;
+    padding: 40px;
   }
 
   .contact-info-section {
