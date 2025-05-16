@@ -739,3 +739,55 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   filter: drop-shadow(5px 5px 0px #000000);
 }
+
+/* #### MEDIA QUERIES #### */
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  /* #### HERO SECTION #### */
+  .hero-section {
+    background-image: none;
+    background: linear-gradient(180deg, #6241b4 0%, #000000 100%);
+    height: auto;
+  }
+
+  .headline {
+    font-size: 50px;
+  }
+
+  /* #### ABOUT ME SECTION #### */
+  .abt-section {
+    background-image: none;
+    background: linear-gradient(180deg, #000000 0%, #6241b4 100%);
+    justify-content: space-evenly;
+    gap: 0;
+  }
+
+  .top-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .project-sec-header-row {
+    gap: 20px;
+  }
+  /* #### CONTACT SECTION #### */
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .contact-info-section {
+    width: 100%;
+  }
+
+  .cif-h {
+    text-align: center;
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}
